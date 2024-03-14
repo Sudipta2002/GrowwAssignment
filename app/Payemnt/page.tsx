@@ -56,7 +56,7 @@ const PaymentPage: React.FC = () => {
 
         <div className='flex flex-col items-center h-3/4'>
         <div className="grid grid-flow-row m-4 gap-4 w-7/12 ">
-        <h1 className='font-bold text-gray-600 text-xl'>Choose Your Payment Method</h1>
+        <h1 className='font-bold text-black text-xl'>Choose Your Payment Method</h1>
         <div className=''>
         {paymentMethods.map((met) => (
             <React.Fragment key={met}>
@@ -71,7 +71,7 @@ const PaymentPage: React.FC = () => {
                     >
                     <div className="flex items-center">
                         <div className="mr-2">{method.icon}</div>
-                        <div className="text-center font-medium">{method.name}</div>
+                        <div className="text-center text-black font-medium">{method.name}</div>
                     </div>
                     <div className="flex items-center" id="select">
                         {selectedMethod === method.name && (
