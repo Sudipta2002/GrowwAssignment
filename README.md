@@ -102,9 +102,18 @@ useEffect(() => {
   applyStyles();
 }, [theme]);
 ```
+![image](https://github.com/Sudipta2002/GrowwAssignment/assets/78099311/c4820742-6939-4a1b-8a72-c25ee5b1ec50)
+![image](https://github.com/Sudipta2002/GrowwAssignment/assets/78099311/2e75c9b2-c64a-4438-a70c-524c0819e803)
+![image](https://github.com/Sudipta2002/GrowwAssignment/assets/78099311/4fde4cf2-01e9-4006-9cf9-cdae7edc4f43)
+![image](https://github.com/Sudipta2002/GrowwAssignment/assets/78099311/aff27952-0157-40e6-9ec5-c8dabaa074d9)
+
 
 ## Responsive Design
 The application is designed to be responsive across various screen sizes. It uses Tailwind CSS for styling and provides a seamless experience on both desktop and mobile devices.
+![image](https://github.com/Sudipta2002/GrowwAssignment/assets/78099311/725c0ab5-e839-4118-adea-d87002b3b77e)
+![image](https://github.com/Sudipta2002/GrowwAssignment/assets/78099311/b388ca88-7eea-4b1a-be1b-8259c8673277)
+![image](https://github.com/Sudipta2002/GrowwAssignment/assets/78099311/36396514-49c9-4e7a-8f85-f1a212c7afb2)
+![image](https://github.com/Sudipta2002/GrowwAssignment/assets/78099311/ad148192-c5fc-4687-a530-ac64a200c6b4)
 
 ## API Integration
 The application fetches order details from a sample API using the fetchOrderDetails function. This function is called during the component's lifecycle to retrieve data asynchronously.
