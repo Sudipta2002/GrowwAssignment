@@ -31,11 +31,11 @@ const ConfirmationPage = () => {
             <div className="bg-gray-300 p-6 rounded-md shadow-md">
             {orderStatus === 'Success' ? (
                 <>
-                <p className="text-green-600">Thank you for your order!</p>
+                <p className="text-black">Thank you for your order!</p>
                
-                <p className="mb-2">Total Amount: ${totalAmount}</p>
-                <p className="mb-2">Payment Method: {paymentMethod}</p>
-                <p className="mb-2">Status: {orderStatus}</p>
+                <p className="mb-2 text-black">Total Amount: ${totalAmount}</p>
+                <p className="mb-2 text-black">Payment Method: {paymentMethod}</p>
+                <p className="mb-2 text-black">Status: {orderStatus}</p>
                 </>
             ) : orderStatus === 'Failure' ? (
                 <>
@@ -44,8 +44,8 @@ const ConfirmationPage = () => {
                 </>
             ) : (
                 <>
-                <p>Your order is pending confirmation.</p>
-                <p>Status: {orderStatus}</p>
+                <p className="text-black">Your order is pending confirmation.</p>
+                <p className="text-black">Status: {orderStatus}</p>
                 </>
             )}
             </div>
