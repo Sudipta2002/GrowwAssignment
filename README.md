@@ -52,6 +52,7 @@ The project is structured as follows:
 - **Dynamic Theming:** Experience a dynamic theme system with customizable styles.
 - **Responsive Design:** Enjoy a responsive design for various screen sizes.
 - **API Integration:** Integrate API calls for fetching order details.
+- **Toggle Background feature added**
 
 ## Getting Started
 
