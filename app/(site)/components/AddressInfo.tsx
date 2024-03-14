@@ -2,14 +2,16 @@
 
 import React from 'react';
 import { BiPhone, BiMapPin } from 'react-icons/bi';
-
-const AddressInfo: React.FC = () => (
+interface AddressInfoProps {
+    darkMode: boolean;
+  }
+const AddressInfo: React.FC<AddressInfoProps>  = ({darkMode}) => (
 
   <div className="delivery-details-container">
   <h1 className='font-bold ml-4 text-2xl m-4'>Delivery Details</h1>
 
   <div className="address-section">
-      <div className="flex items-center w-80 m-4 bg-gray-300 p-4 rounded-md mb-2">
+      <div className={`flex items-center w-80 m-4 ${darkMode ? 'bg-gray-700' : 'bg-gray-300'} p-4 rounded-md mb-2`}>
             <BiMapPin className="text-gray-500 mr-2" />
             <div>
                 <p>123 Bekar Street, Kolkata</p>

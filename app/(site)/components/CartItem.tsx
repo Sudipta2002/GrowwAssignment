@@ -9,9 +9,10 @@ interface CartItemProps {
     image: string;
     quantity: number;
   };
+  darkMode: boolean;
 }
 
-const CartItem: React.FC<CartItemProps> = ({ product }) =>{
+const CartItem: React.FC<CartItemProps> = ({ product,darkMode }) =>{
     const { updateProductQuantity } = useCartStore();
 
 
@@ -26,7 +27,7 @@ const CartItem: React.FC<CartItemProps> = ({ product }) =>{
     };
 
   return (
-    <div className='flex bg-gray-300 p-4 mb-4 rounded shadow-lg justify-between max-h-32 font-semibold'>
+    <div className={`flex ${darkMode ? 'bg-gray-700' : 'bg-gray-300'} p-4 mb-4 rounded shadow-lg justify-between max-h-32 font-semibold`}>
       <img className=' w-30 h-24 img object-cover mb-4 rounded-lg' src={product.image} alt={product.title} style={{ width: '50px' }} />
       <p className='w-40 m-1 overflow-hidden title  items-center'>{product.title}</p>
       
