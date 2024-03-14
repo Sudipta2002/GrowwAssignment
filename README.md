@@ -1,3 +1,7 @@
+
+![Groww_app_logo](https://github.com/Sudipta2002/GrowwAssignment/assets/78099311/04e3dc4b-e429-4317-a664-a3455adac140)
+
+
 # NextJS Checkout Application
 
 ## Table of Contents
@@ -51,7 +55,7 @@ The project is structured as follows:
 
 ## Getting Started
 
-1. Clone the repository: `git clone https://github.com/rivuff/CheckoutApllicationGrow`
+1. Clone the repository: `git clone https://github.com/Sudipta2002/GrowwAssignment`
 2. Install dependencies: `npm install`
 3. Run the development server: `npm run dev`
 4. Open the application in your browser: [http://localhost:3000](http://localhost:3000)
