@@ -47,7 +47,7 @@ export default function Home() {
         const response = await fetchthemeDetails() // fetch('https://groww-intern-assignment.vercel.app/v1/api/merchant-metadata');
         const data = await response.json();
         
-        console.log("data",data);
+        // console.log("data",data);
         console.log(data.theme["--background"]);
         
       
@@ -78,11 +78,64 @@ export default function Home() {
 
     if (darkMode) {
       // Set dark mode colors
-      console.log("setting dark mode")
-      root.style.setProperty('background', "hsl(267, 100%, 22%)");
-      root.style.setProperty('foreground', "hsl(53, 88%, 49%)");
-      root.style.setProperty('color', 'hsl(53, 88%, 100%)');
-      // console.log("hsl(53, 88%, 49%)")
+      // console.log(theme["--background"]);
+      /*
+        green
+        --background hsl(20, 14.3%, 4.1%)
+        --foreground hsl(0, 0%, 95%)
+        --primary hsl(142.1, 70.6%, 45.3%)
+        --primary-foreground hsl(144.9, 80.4%, 10%)
+
+        yellow
+        --background hsl(20, 14.3%, 4.1%)
+        --foreground hsl(60, 9.1%, 97.8%)
+        --primary hsl(47.9, 95.8%, 53.1%)
+        --primary-foreground hsl(26, 83.3%, 14.1%)
+
+        red
+        --background hsl(20, 14.3%, 4.1%)
+        --foreground hsl(0, 0%, 95%)
+        --primary hsl(346.8, 77.2%, 49.8%)
+        --primary-foreground hsl(355.7, 100%, 97.3%)
+
+        blue
+        --background hsl(222.2, 84%, 4.9%)
+        --foreground hsl(210, 40%, 98%)
+        --primary hsl(217.2, 91.2%, 59.8%)
+        --primary-foreground hsl(222.2, 47.4%, 11.2%)
+
+        black
+        --background hsl(0, 0%, 100%)
+        --foreground hsl(240, 10%, 3.9%)
+        --primary hsl(240, 5.9%, 10%) 
+        --primary-foreground hsl(0, 0%, 98%)
+      */
+      if(theme["--background"]=="hsl(20, 14.3%, 4.1%)" && theme["--foreground"]=="hsl(0, 0%, 95%)" &&
+        theme["--primary"]=="hsl(142.1, 70.6%, 45.3%)" && theme["--primary-foreground"]=="hsl(144.9, 80.4%, 10%)"
+      ){//green
+        
+        console.log("setting dark mode")
+        root.style.setProperty('background', "hsl(120, 100%, 20%)");//120° , 100% , 20%
+        root.style.setProperty('foreground', "hsl(53, 88%, 49%)");
+        root.style.setProperty('color', 'hsl(53, 88%, 100%)');
+
+      }else if(theme["--background"]=="hsl(222.2, 84%, 4.9%)" && theme["--foreground"]=="hsl(210, 40%, 98%)" &&
+        theme["--primary"]=="hsl(217.2, 91.2%, 59.8%)" && theme["--primary-foreground"]=="hsl(222.2, 47.4%, 11.2%)"){// blue
+          root.style.setProperty('background', "hsl(267, 100%, 22%)");
+          root.style.setProperty('foreground', "hsl(53, 88%, 49%)");
+          root.style.setProperty('color', 'hsl(53, 88%, 100%)');
+        }else if(theme["--background"]=="hsl(20, 14.3%, 4.1%)" && theme["--foreground"]=="hsl(60, 9.1%, 97.8%)" &&//yellow
+        theme["--primary"]=="hsl(47.9, 95.8%, 53.1%)" && theme["--primary-foreground"]=="hsl(26, 83.3%, 14.1%)"){
+          root.style.setProperty('background', "hsl(53, 68%, 50%)");
+          root.style.setProperty('foreground', "hsl(53, 88%, 49%)");
+          root.style.setProperty('color', 'hsl(53, 88%, 100%)');
+        }else if(theme["--background"]=="hsl(20, 14.3%, 4.1%)" && theme["--foreground"]=="hsl(0, 0%, 95%)" &&//red
+        theme["--primary"]=="hsl(346.8, 77.2%, 49.8%)" && theme["--primary-foreground"]=="hsl(355.7, 100%, 97.3%)"){
+          root.style.setProperty('background', "hsl(332, 54%, 43%)");
+          root.style.setProperty('foreground', "hsl(53, 88%, 49%)");
+          root.style.setProperty('color', 'hsl(53, 88%, 100%)');
+        }
+      // console.log("hsl(53, 88%, 49%)");
     }else{
       for (const [property, value] of Object.entries(theme)) {
         if(property == '--primary'){
@@ -90,7 +143,13 @@ export default function Home() {
           root.style.backgroundColor = value;
           
         }else if (property == '--primary-foreground'){
+          if(theme["--background"]=="hsl(20, 14.3%, 4.1%)" && theme["--foreground"]=="hsl(0, 0%, 95%)" &&//red
+        theme["--primary"]=="hsl(346.8, 77.2%, 49.8%)" && theme["--primary-foreground"]=="hsl(355.7, 100%, 97.3%)"){
+          root.style.setProperty('color', 'hsl(222.2, 47.4%, 11.2%)');
+
+        }else{
           root.style.setProperty('color', value);
+        }
           //root.style.color = value;
         }
         else if (property == '--background'){
@@ -99,8 +158,8 @@ export default function Home() {
         else if (property == '--foreground'){
           root.style.setProperty('--foreground', value)
         }
-        
-        console.log(property,typeof( value));
+        // root.style.setProperty('color', 'hsl(53, 88%, 100%)');
+        console.log(property,value);
       }
     }
 
@@ -151,7 +210,7 @@ export default function Home() {
 
   totalAmount.toFixed(2);
   priceAmount.toFixed(2);
-  console.log(brand);    
+  // console.log(brand);    
 
   return (
     <div className="container mx-auto p-4 m-4 mb-8 header-section">
